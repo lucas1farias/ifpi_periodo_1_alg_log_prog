@@ -1,7 +1,7 @@
 
 
 // problema 24
-// 24. Leia um valor em m, calcule e escreva o equivalente em cm
+// Leia um valor em m, calcule e escreva o equivalente em cm
 
 let input = require('readline-sync')
 
