@@ -1,0 +1,53 @@
+
+
+Elabore o Algoritmo (passo a passo da solução) e implemente-o 
+utilizando Javascript (ou Python, Go, C) para as questões de 24 
+até 46 da Lista 01 do Prof. Fábio Gomes, PDFs já disponíveis.
+
+Usar apenas os recursos abaixo (Como nos exemplos de Treinamento):
+
+. Entrada e Saída Padrão da Linguagem ou via Lib que facilite 
+(ex.: readline-sync) 
+
+. Conversão de Tipos: Number ou equivalente
+
+. Operadores Aritméticos + Math.floor ou Equivalente + Math.sqrt 
+ou equivalente
+
+. Saída: console.log ou equivalente + template string ou 
+equivalente
+
+. Organizar as Instruções em Entrada, Processamento e Saída via 
+comentários
+
+. Variáveis com nomes significativo
+
+. Utilize os seguintes nomes:
+
+24. valor_cm.js               || OK
+25. converter_km_m.js         || OK
+26. semanas_dias.js           || OK
+27. segundos_horas_minutos.js || OK
+28. semanas_dias_horas.js     || OK
+29. anos_meses.js             || OK
+30. dias_horas_minutos.js     || OK
+31. binario.js                || OK
+32. diff_inverso.js           || OK
+33. soma_inverso.js           || OK
+34. media_numeros.js          || OK
+35. soma_elementos.js         || OK
+36. idade_dias.js             || OK
+37. idade_anos_meses_dias.js  || OK
+38. soma_fracoes.js           || OK
+39. expressao.js              || OK
+40. lol_gasoso.js             || OK
+41. carro.js                  || OK
+42. distancia_pontos.js       || OK
+43. equacao_linear.js         ||
+44. latao.js                  || OK
+45. caixa_eletronico.js       || OK
+46. crediario.js              ||
+
+Entrega apenas via Link (Google Drive ou Github). NÃO ANEXAR ARQUIVO.
+Aproveitem o processo --> Memória Muscular.
+Individual

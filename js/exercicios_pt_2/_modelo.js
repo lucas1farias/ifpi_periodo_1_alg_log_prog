@@ -3,16 +3,16 @@
 // problema
 // 
 
-let input = require('readline-sync')
+const input = require('readline-sync')
 
 // Entrada
-let value = 0
+const value = 0
 // let value = Number(input.question('Digite ---> '))
 
 // Processamento
 
 // Saída
-let title = '\n===== RELATÓRIO =====\n'
-let report = title
+const title = '\n===== RELATÓRIO =====\n'
+const report = title
 
 console.log(report)
