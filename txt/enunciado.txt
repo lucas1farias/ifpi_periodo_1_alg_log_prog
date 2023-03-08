@@ -46,7 +46,7 @@ comentários
 43. equacao_linear.js         ||
 44. latao.js                  || OK
 45. caixa_eletronico.js       || OK
-46. crediario.js              ||
+46. crediario.js              || OK
 
 Entrega apenas via Link (Google Drive ou Github). NÃO ANEXAR ARQUIVO.
 Aproveitem o processo --> Memória Muscular.
