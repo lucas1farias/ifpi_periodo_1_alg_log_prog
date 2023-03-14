@@ -6,7 +6,6 @@
 import { question } from "readline-sync"
 
 // Entrada
-// const binary = input.question('Digite um valor bin de 4 caracteres ---> ')
 const binary = question('Digite um valor bin de 4 caracteres ---> ')
 
 // Processamento
