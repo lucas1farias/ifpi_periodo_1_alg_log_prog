@@ -3,20 +3,22 @@
 // problema 31
 // Leia um número inteiro (4 dígitos binários), calcule e escreva o equivalente na base decimal.
 
-const input = require('readline-sync')
+import { question } from "readline-sync"
 
 // Entrada
-const binary = input.question('Digite um valor bin de 4 caracteres ---> ')
+// const binary = input.question('Digite um valor bin de 4 caracteres ---> ')
+const binary = question('Digite um valor bin de 4 caracteres ---> ')
 
 // Processamento
-const index1 = binary[3] * Math.pow(2, 0) 
-const index2 = binary[2] * Math.pow(2, 1) 
-const index3 = binary[1] * Math.pow(2, 2) 
-const index4 = binary[0] * Math.pow(2, 3)
-const decimal = index1 + index2 + index3 + index4
+const binaryNumber = Number(binary)
+const unit = binaryNumber % 10
+const ten = ((binaryNumber % 100) - (binaryNumber % 10)) / 10
+const hundred = ((binaryNumber % 1000) - (binaryNumber % 100)) / 100
+const thousand = ((binaryNumber % 10000) - (binaryNumber % 1000)) / 1000
+const binaryTranslation = (unit * 2 ** 0) + (ten * 2 ** 1) + (hundred * 2 ** 2) + (thousand * 2 ** 3)
 
 // Saída
 const title = '\n===== RELATÓRIO =====\n'
-const report = title + 'Binário: ' + binary + '\nDecimal: ' + decimal + '\n'
+const report = title + 'Binário: ' + binary + '\nDecimal: ' + binaryTranslation + '\n'
 
-console.log(report)
+console.log(report) 
