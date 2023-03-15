@@ -3,11 +3,11 @@
 // problema 12
 // Leia o salário de um trabalhador e escreva seu novo salário com um aumento de 25%.
 
-let input = require('readline-sync')
+import { question } from "readline-sync"
 
 // Entradas
-let personSalary = Number(input.question('Digite o valor do salário ---> '))
-let percentageRaise = Number(input.question('Valor do ajuste em porcento ---> '))
+let personSalary = Number(question('Digite o valor do salário ---> '))
+let percentageRaise = Number(question('Valor do ajuste em porcento ---> '))
 
 // Processamento
 let personSalaryRaise = personSalary * (percentageRaise / 100)

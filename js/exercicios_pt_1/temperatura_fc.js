@@ -3,10 +3,10 @@
 // problema 21
 // Leia uma temperatura em °F, calcule e escreva a equivalente em °C. (t°C = (5 * t°F - 160) / 9).
 
-let input = require('readline-sync')
+import { question } from "readline-sync"
 
 // Entrada
-let fahrenheitTemp = Number(input.question('Digite um valor em temperatura fahrenheit ---> '))
+let fahrenheitTemp = Number(question('Digite um valor em temperatura fahrenheit ---> '))
 
 // Processamento
 let adittionalTemp = 160
