@@ -28,6 +28,19 @@ function main() {
   footer('===== FIM DA EXECUÇÃO =====\n')
 }
 
+function print(msg) {
+  console.log(msg)
+}
+
+function title(titleLabel) {
+  print(titleLabel)
+}
+
+function numericInput(msg) {
+  const element = Number(question(msg))
+  return element
+}
+
 function amountKgLoss(weight, percentage) {
   const percentageReal = percentage / 100
   const kgWeightLoss =  (weight * percentageReal).toFixed(2)
@@ -48,19 +61,6 @@ function weightIntoCalories(weightValue) {
 function getCalorieDailyDeficit(calorieValue, days) {
   const calculus = Number((calorieValue / days).toFixed(2))
   return calculus
-}
-
-function numericInput(msg) {
-  const element = Number(question(msg))
-  return element
-}
-
-function print(msg) {
-  console.log(msg)
-}
-
-function title(titleLabel) {
-  print(titleLabel)
 }
 
 function content(contentLabel) {

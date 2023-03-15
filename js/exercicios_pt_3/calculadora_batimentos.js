@@ -3,8 +3,12 @@
 import { question } from "readline-sync"
 
 function main() {
-  print('\n===== BEM-VINDO À CALCULADORA DE BATIMENTOS CARDÍACOS =====\n')
+  title('\n===== BEM-VINDO À CALCULADORA DE BATIMENTOS CARDÍACOS =====\n')
+
+  // Entrada
   const age = numericInput('Informe a sua idade ---> ')
+
+  // Processamento
   const heartRateMax = heartbeatMaxRate(age)
   const heartRateLevel1 = Math.floor(heartRateMax * (50 / 100))
   const heartRateLevel2 = Math.floor(heartRateMax * (55 / 100))
@@ -18,18 +22,24 @@ function main() {
   const intenseHeartRateMean = Math.floor((heartRateLevel5 + heartRateLevel6 + heartRateLevel7 + heartRateLevel8) / 4)
   const moderateGroup = `(${heartRateLevel1}, ${heartRateLevel2}, ${heartRateLevel3}, ${heartRateLevel4})`
   const intenseGroup = `(${heartRateLevel5}, ${heartRateLevel6}, ${heartRateLevel7}, ${heartRateLevel8})`
-  print('\n===== RELATÓRIO =====')
-  print('PESQUISA: Média de batimentos cardíacos entre atletas moderados e intensos')
-  print(`Idade do atleta               || ${age} anos`)
-  print(`Frequência cardíaca máxima    || ${heartRateMax}`)
-  print('===== MÉDIA DE BATIMENTOS ESPERADOS POR CATEGORIA =====')
-  print(`Atletas de categoria moderada || ${moderateGroup} [média: ${moderateHeartRateMean} bpm]`)
-  print(`Atletas de categoria intensa  || ${intenseGroup} [média: ${intenseHeartRateMean} bpm]`)
-  print('===== FIM DA EXECUÇÃO =====\n')
+  
+  // Saída
+  title('\n===== RELATÓRIO =====')
+  content('PESQUISA: Média de batimentos cardíacos entre atletas moderados e intensos')
+  content(`Idade do atleta               || ${age} anos`)
+  content(`Frequência cardíaca máxima    || ${heartRateMax}`)
+  content('===== MÉDIA DE BATIMENTOS ESPERADOS POR CATEGORIA =====')
+  content(`Atletas de categoria moderada || ${moderateGroup} [média: ${moderateHeartRateMean} bpm]`)
+  content(`Atletas de categoria intensa  || ${intenseGroup} [média: ${intenseHeartRateMean} bpm]`)
+  footer('===== FIM DA EXECUÇÃO =====\n')
 }
 
 function print(msg) {
   console.log(msg)
+}
+
+function title(titleLabel) {
+  print(titleLabel)
 }
 
 function numericInput(text) {
@@ -41,6 +51,14 @@ function heartbeatMaxRate(age) {
   const formulaValue = 220
   const maxRate = formulaValue - age
   return maxRate
+}
+
+function content(contentLabel) {
+  print(contentLabel)
+}
+
+function footer(footerLabel) {
+  print(footerLabel)
 }
 
 main()
