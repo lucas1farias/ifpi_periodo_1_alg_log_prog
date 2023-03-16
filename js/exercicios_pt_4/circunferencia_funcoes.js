@@ -10,13 +10,13 @@ COMPRIMENTO || Tamanho da medida da volta dada ao redor do círculo (também cha
 PI          || Valor usado na fórmula do cálculo da área do círculo
 */
 
-import { question } from "readline-sync"
+import * as functionDb from "../../functions.js"
 
 function main() {
-  title('\n===== BEM-VINDO À CALCULADORA DE COMPRIMENTO DA CIRCUNFERÊNCIA =====')
+  functionDb.title('BEM-VINDO À CALCULADORA DE COMPRIMENTO DA CIRCUNFERÊNCIA')
   
   // Entrada
-  const circleRadius = numericInput('Digite o valor do raio de uma circunferência ---> ')
+  const circleRadius = functionDb.numericInput('Digite o valor do raio de uma circunferência ---> ')
   
   // Processamento
   // FÓRMULA: [pi = C/D]  Tecnicamente, pi sempre será multiplicado com D (onde D é o dobro de R)
@@ -24,23 +24,10 @@ function main() {
   const circleArea = getCircleArea(circleRadius)
   
   // Saída
-  title('\n========== RELATÓRIO ==========')
-  content(`Comprimento || ${circleLenght}`)
-  content(`Área        || ${circleArea}`)
-  footer('===== FIM DA EXECUÇÃO =====\n')
-}
-
-function print(msg) {
-  console.log(msg)
-}
-
-function title(titleLabel) {
-  print(titleLabel)
-}
-
-function numericInput(text) {
-  const element = Number(question(text))
-  return element
+  functionDb.title('RELATÓRIO')
+  functionDb.content(`Comprimento || ${circleLenght}`)
+  functionDb.content(`Área        || ${circleArea}`)
+  functionDb.footer('FIM DA EXECUÇÃO')
 }
 
 function getCircleLength(radius) {
@@ -53,14 +40,6 @@ function getCircleArea(radius) {
   const pi = Math.PI
   const calculus = pi * (radius * radius)
   return calculus.toFixed(2)
-}
-
-function content(contentLabel) {
-  print(contentLabel)
-}
-
-function footer(footerLabel) {
-  print(footerLabel)
 }
 
 main()

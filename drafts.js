@@ -34,5 +34,3 @@ function content(contentLabel) {
 function footer(footerLabel) {
   print(footerLabel)
 }
-
-main()
