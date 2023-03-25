@@ -3,10 +3,10 @@
 // problema 36
 // Leia a idade de uma pessoa expressa em anos, meses e dias e escreva-a expressa apenas em dias.
 
-const input = require('readline-sync')
+import { question } from "readline-sync"
 
 // Entrada
-const age = Number(input.question('Digite o valor correspondente à sua idade ---> '))
+const age = Number(question('Digite o valor correspondente à sua idade ---> '))
 
 // Processamento
 const yearInDays = 365.2425

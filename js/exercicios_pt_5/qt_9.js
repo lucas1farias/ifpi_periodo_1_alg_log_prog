@@ -1,0 +1,55 @@
+
+
+// 9. Leia 1 (um) número entre 0 e 100, verifique e escreva se o número é ou não primo.
+
+import * as functionDb from "../../functions.js"
+
+function main() {
+  // Entradas
+  // const a = functionDb.numericInput("Informe um número de 2 dígitos ---> ")
+  const twoDigitsNumber = 11
+
+  // Processamento
+  const primeOrNot = isNumberPrime(twoDigitsNumber)
+
+  // Saída
+  functionDb.title("RELATÓRIO")
+  functionDb.content(primeOrNot)
+  functionDb.footer("FIM DA EXECUÇÃO")
+}
+
+function isNumberPrime(n) {
+  const yes = `${n} é primo`
+  const no = `${n} não é primo`
+  if (n == 1) {
+    // return 0
+    return no
+  }
+  if (n == 2 || n == 3 || n == 5 || n == 7) {
+    // return n
+    return yes
+  }
+  if (n % 2 != 0 && n % 3 != 0 && n % 5 != 0 && n % 7 != 0 && n % 9 != 0) {
+    // return n
+    return yes
+  } 
+  else {
+    // return 0
+    return no
+  }
+}
+
+main()
+
+
+// let value = 1
+// const loop = setInterval(() => {
+//   let checkage = isNumberPrime(value)
+//   if (checkage == value) {
+//     console.log(value)
+//   }  
+//   if (value == 100) {
+//     clearInterval(loop)
+//   }
+//   value++
+// })

@@ -3,11 +3,11 @@
 // problema 10
 // Leia 2 números inteiros, calcule e escreva o quociente e o resto da divisão do 1º pelo 2º.
 
-let input = require('readline-sync')
+import { question } from "readline-sync"
 
 // Entrada
-let numberToBeDivided = Number(input.question('Digite um dividendo ---> '))
-let divisor = Number(input.question('Digite um divisor ---> '))
+let numberToBeDivided = Number(question('Digite um dividendo ---> '))
+let divisor = Number(question('Digite um divisor ---> '))
 
 // Processamento
 let operation = numberToBeDivided + '/' + divisor

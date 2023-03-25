@@ -1,0 +1,17 @@
+
+
+import * as functionDb from "../../functions.js"
+
+function main() {
+  // Entradas
+  const a = functionDb.numericInput(" ---> ")
+
+  // Processamento
+
+  // Saída
+  functionDb.title("RELATÓRIO")
+  functionDb.content()
+  functionDb.footer("FIM DA EXECUÇÃO")
+}
+
+main()
