@@ -10,12 +10,12 @@ import * as functionDb from "../../functions.js"
 
 function main() {
   // Entradas
-  // const angle1st = functionDb.numericInput("Informe o valor do primeiro ângulo ---> ")
-  // const angle2nd = functionDb.numericInput("Informe o valor do segundo ângulo ---> ")
-  // const angle3rd = functionDb.numericInput("Informe o valor do terceiro ângulo ---> ")
-  const angle1st = 20
-  const angle2nd = 60
-  const angle3rd = 100
+  const angle1st = functionDb.numericInput("Informe o valor do primeiro ângulo ---> ")
+  const angle2nd = functionDb.numericInput("Informe o valor do segundo ângulo ---> ")
+  const angle3rd = functionDb.numericInput("Informe o valor do terceiro ângulo ---> ")
+  // const angle1st = 20
+  // const angle2nd = 60
+  // const angle3rd = 100
 
   // Processamento
   const anglesSum = triangleAnglesSum(angle1st, angle2nd, angle3rd)

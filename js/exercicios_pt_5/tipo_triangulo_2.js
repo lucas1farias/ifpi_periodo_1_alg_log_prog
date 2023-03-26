@@ -11,12 +11,12 @@ import * as functionDb from "../../functions.js"
 
 function main() {
   // Entradas
-  // const side1st = functionDb.numericInput(" ---> ")
-  // const side2nd = functionDb.numericInput(" ---> ")
-  // const side3rd = functionDb.numericInput(" ---> ")
-  const side1st = 80
-  const side2nd = 20
-  const side3rd = 80
+  const side1st = functionDb.numericInput("Informe um ângulo de um primeiro triângulo ---> ")
+  const side2nd = functionDb.numericInput("Informe um ângulo de um segundo triângulo ---> ")
+  const side3rd = functionDb.numericInput("Informe um ângulo de um terceiro triângulo ---> ")
+  // const side1st = 80
+  // const side2nd = 20
+  // const side3rd = 80
 
   // Processamento
   const triangleExists = isTriangle(side1st, side2nd, side3rd)

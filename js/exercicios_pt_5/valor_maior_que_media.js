@@ -6,16 +6,16 @@ import * as functionDb from "../../functions.js"
 
 function main() {
   // Entradas
-  // const firstInt = functionDb.numericInput("Informe um número inteiro ---> ")
-  // const secondInt = functionDb.numericInput("Informe um próximo número inteiro ---> ")
-  // const thirdInt = functionDb.numericInput("Informe mais um número inteiro ---> ")
-  // const fourthInt = functionDb.numericInput("Informe outro número inteiro ---> ")
-  // const fifthInt = functionDb.numericInput("Informe apenas mais um número inteiro ---> ")
-  const firstInt = 10
-  const secondInt = 10
-  const thirdInt = 10
-  const fourthInt = 15
-  const fifthInt = 20
+  const firstInt = functionDb.numericInput("Informe um número inteiro ---> ")
+  const secondInt = functionDb.numericInput("Informe um próximo número inteiro ---> ")
+  const thirdInt = functionDb.numericInput("Informe mais um número inteiro ---> ")
+  const fourthInt = functionDb.numericInput("Informe outro número inteiro ---> ")
+  const fifthInt = functionDb.numericInput("Informe apenas mais um número inteiro ---> ")
+  // const firstInt = 10
+  // const secondInt = 10
+  // const thirdInt = 10
+  // const fourthInt = 15
+  // const fifthInt = 20
 
   // Processamento
   const meanCalculus = mean(firstInt, secondInt, thirdInt, fourthInt, fifthInt)

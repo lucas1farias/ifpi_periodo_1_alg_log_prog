@@ -8,12 +8,12 @@ import * as functionDb from "../../functions.js"
 
 function main() {
   // Entradas
-  // const oneSide = functionDb.numericInput(" ---> ")
-  // const otherSide = functionDb.numericInput(" ---> ")
-  // const lastSide = functionDb.numericInput(" ---> ")
-  const oneSide = 5
-  const otherSide = 3
-  const lastSide = 4
+  const oneSide = functionDb.numericInput("Informe o lado 1 de um triângulo ---> ")
+  const otherSide = functionDb.numericInput("Informe o lado 2 de um triângulo ---> ")
+  const lastSide = functionDb.numericInput("Informe o lado 3 de um triângulo ---> ")
+  // const oneSide = 5
+  // const otherSide = 3
+  // const lastSide = 4
 
   // Processamento
   const hypotGuess = compare(oneSide, otherSide, lastSide)

@@ -9,8 +9,8 @@ import * as functionDb from "../../functions.js"
 
 function main() {
   // Entradas
-  // const twoDigitsNumber = functionDb.numericInput("Informe um número de 2 dígitos ---> ")
-  const twoDigitsNumber = 21
+  const twoDigitsNumber = functionDb.numericInput("Informe um número de 2 dígitos ---> ")
+  // const twoDigitsNumber = 21
 
   // Processamento
   const unit = findNumberDecimalPlace(twoDigitsNumber, 'unidade')

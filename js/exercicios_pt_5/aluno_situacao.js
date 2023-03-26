@@ -11,10 +11,10 @@ import * as functionDb from "../../functions.js"
 
 function main() {
   // Entradas
-  // const studentGrade1 = functionDb.numericInput("Informe a primeira nota do aluno ---> ")
-  // const studentGrade2 = functionDb.numericInput("Informe a segunda nota do aluno ---> ")
-  const studentGrade1 = 7.5
-  const studentGrade2 = 7.7
+  const studentGrade1 = functionDb.numericInput("Informe a primeira nota do aluno ---> ")
+  const studentGrade2 = functionDb.numericInput("Informe a segunda nota do aluno ---> ")
+  // const studentGrade1 = 7.5
+  // const studentGrade2 = 7.7
 
   // Processamento
   const studentMean = mean(studentGrade1, studentGrade2)

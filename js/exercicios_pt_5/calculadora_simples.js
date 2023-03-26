@@ -10,12 +10,12 @@ import * as functionDb from "../../functions.js"
 
 function main() {
   // Entradas
-  // const firstNumber = functionDb.numericInput("Informe um primeiro número ---> ")
-  // const secondNumber = functionDb.numericInput("Informe um segundo número ---> ")
-  // const operator = functionDb.numericInput("Informe um dos operadores a seguir (+, -, *, /) ---> ")
-  const firstNumber = 8
-  const secondNumber = 18
-  const operator = '/'
+  const firstNumber = functionDb.numericInput("Informe um primeiro número ---> ")
+  const secondNumber = functionDb.numericInput("Informe um segundo número ---> ")
+  const operator = functionDb.textInput("Informe um dos operadores a seguir (+, -, *, /) ---> ")
+  // const firstNumber = 8
+  // const secondNumber = 18
+  // const operator = '/'
 
   // Processamento
   const calculusResult = calculate(firstNumber, secondNumber, operator)

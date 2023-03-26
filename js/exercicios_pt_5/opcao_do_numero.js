@@ -10,20 +10,19 @@ import * as functionDb from "../../functions.js"
 
 function main() {
   // Entradas
-  // const a = functionDb.numericInput(" ---> ")
-  // const option = functionDb.numericInput("Informe um número de opção (1, 2 ou 3) ---> ")
-  // const firstNumber = functionDb.numericInput("Escolha um número qualquer ---> ")
-  // const secondNumber = functionDb.numericInput("Escolha um outro número qualquer ---> ")
-  // const thirdNumber = functionDb.numericInput("Escolha um próximo número qualquer ---> ")
-  
-  const option = 0
-  const firstNumber = 20
-  const secondNumber = 62
-  const thirdNumber = 33
+  const option = functionDb.numericInput("Informe um número de opção (1, 2 ou 3) ---> ")
+  const firstNumber = functionDb.numericInput("Escolha um número qualquer ---> ")
+  const secondNumber = functionDb.numericInput("Escolha um outro número qualquer ---> ")
+  const thirdNumber = functionDb.numericInput("Escolha um próximo número qualquer ---> ")
+  // const option = 0
+  // const firstNumber = 20
+  // const secondNumber = 62
+  // const thirdNumber = 33
   
   // Processamento
   const isOptionProper = isOutOfRange(option, 1, 3)
   let report = ''
+  
   if (isOptionProper) {
     if (option == 1) {
       report = firstNumber

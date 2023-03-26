@@ -6,8 +6,8 @@ import * as functionDb from "../../functions.js"
 
 function main() {
   // Entradas
-  // const a = functionDb.numericInput("Informe um número de 2 dígitos ---> ")
-  const twoDigitsNumber = 11
+  const twoDigitsNumber = functionDb.numericInput("Informe um número de 2 dígitos ---> ")
+  // const twoDigitsNumber = 11
 
   // Processamento
   const primeOrNot = isNumberPrime(twoDigitsNumber)

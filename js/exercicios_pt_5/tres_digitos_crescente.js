@@ -6,12 +6,12 @@ import * as functionDb from "../../functions.js"
 
 function main() {
   // Entradas
-  // const firstNum = functionDb.numericInput("Informe um primeiro número ---> ")
-  // const secondNum = functionDb.numericInput("Informe um segundo número ---> ")
-  // const thirdNum = functionDb.numericInput("Informe um terceiro número ---> ")
-  const firstNum = -2
-  const secondNum = 12
-  const thirdNum = 0
+  const firstNum = functionDb.numericInput("Informe um primeiro número ---> ")
+  const secondNum = functionDb.numericInput("Informe um segundo número ---> ")
+  const thirdNum = functionDb.numericInput("Informe um terceiro número ---> ")
+  // const firstNum = -2
+  // const secondNum = 12
+  // const thirdNum = 0
 
   // Processamento
   const numbersOrder = ascendingOrder(firstNum, secondNum, thirdNum)

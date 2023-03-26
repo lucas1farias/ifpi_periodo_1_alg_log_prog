@@ -10,14 +10,14 @@ import * as functionDb from "../../functions.js"
 
 function main() {
   // Entradas
-  // const rectBase = Number(input.question('Informe um valor X em um plano cartesiano ---> '))
-  // const rectHeight = Number(input.question('Informe um valor Y em um plano cartesiano ---> '))
-  const rectBase = 12
-  const rectHeight = 7
+  const rectBase = functionDb.numericInput('Informe um valor X em um plano cartesiano ---> ')
+  const rectHeight = functionDb.numericInput('Informe um valor Y em um plano cartesiano ---> ')
+  // const rectBase = 12
+  // const rectHeight = 7
 
   // Processamento
   const rectArea = getRectangleArea(rectBase, rectHeight)
-  const report = `Área de um retângulo de base X ${rectBase} e altura Y ${rectHeight}: ${rectArea}`
+  const report = `Área de um retângulo de base X=${rectBase} e altura Y=${rectHeight}: ${rectArea}`
   const mistake = `Um retângulo não possui área negativa!`
 
   if (rectArea >= 0) {

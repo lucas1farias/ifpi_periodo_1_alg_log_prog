@@ -6,16 +6,16 @@ import * as functionDb from "../../functions.js"
 
 function main() {
   // Entradas
-  // const firstNUm = functionDb.numericInput('Informe um primeiro número ---> ')
-  // const secondNUm = functionDb.numericInput('Informe um segundo número ---> ')
-  // const thirdNUm = functionDb.numericInput('Informe um terceiro número ---> ')
-  const firstNUm = 10
-  const secondNUm = 17
-  const thirdNUm = 55
+  const firstNUm = functionDb.numericInput('Informe um primeiro número ---> ')
+  const secondNUm = functionDb.numericInput('Informe um segundo número ---> ')
+  const thirdNUm = functionDb.numericInput('Informe um terceiro número ---> ')
+  // const firstNUm = 10
+  // const secondNUm = 17
+  // const thirdNUm = 55
 
   // Processamento
   const biggest = findBiggestNumber(firstNUm, secondNUm, thirdNUm)
-  const numbers = `${firstNUm} ${secondNUm} ${thirdNUm}`
+  const numbers = `(${firstNUm}, ${secondNUm}, ${thirdNUm})`
 
   // Saída
   functionDb.title("RELATÓRIO")

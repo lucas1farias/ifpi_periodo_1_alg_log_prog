@@ -9,8 +9,8 @@ import * as functionDb from "../../functions.js"
 
 function main() {
   // Entradas
-  // const angle = functionDb.numericInput("Informe um valor de ângulo entre 0 a 360 ---> ")
-  const angle = 271
+  const angle = functionDb.numericInput("Informe um valor de ângulo entre 0 a 360 ---> ")
+  // const angle = 271
 
   // Processamento
   const angleLocation = angleQuadrant(angle)

@@ -9,18 +9,18 @@ import * as functionDb from "../../functions.js"
 
 function main() {
   // Entradas
-  // const birthDay = functionDb.numericInput("Informe o dia do mês que você nasceu ---> ")
-  // const birthMonth = functionDb.numericInput("Informe o mês em que você nasceu ---> ")
-  // const birthYear = functionDb.numericInput("Informe o ano em que você nasceu ---> ")
-  // const dayNow = functionDb.numericInput("Informe o dia do mês de hoje ---> ")
-  // const monthNow = functionDb.numericInput("Informe o mês atual ---> ")
-  // const yearNow = functionDb.numericInput("Informe o ano atual ---> ")
-  const birthDay = 16
-  const birthMonth = 7
-  const birthYear = 1992
-  const dayNow = 25
-  const monthNow = 3
-  const yearNow = 2023
+  const birthDay = functionDb.numericInput("Informe o dia do mês que você nasceu ---> ")
+  const birthMonth = functionDb.numericInput("Informe o mês em que você nasceu ---> ")
+  const birthYear = functionDb.numericInput("Informe o ano em que você nasceu ---> ")
+  const dayNow = functionDb.numericInput("Informe o dia do mês de hoje ---> ")
+  const monthNow = functionDb.numericInput("Informe o mês atual ---> ")
+  const yearNow = functionDb.numericInput("Informe o ano atual ---> ")
+  // const birthDay = 16
+  // const birthMonth = 7
+  // const birthYear = 1992
+  // const dayNow = 25
+  // const monthNow = 3
+  // const yearNow = 2023
 
   // Processamento
   const personAge = getAge(birthDay, birthMonth, birthYear, dayNow, monthNow, yearNow)

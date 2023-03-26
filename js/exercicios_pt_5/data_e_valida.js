@@ -6,12 +6,12 @@ import * as functionDb from "../../functions.js"
 
 function main() {
   // Entradas
-  // const day = functionDb.numericInput("Informe uma data de dia do mês válida (de 26 até 31) ---> ")
-  // const month = functionDb.numericInput("Informe uma mês válido (de 1 até 12) ---> ")
-  // const year = functionDb.numericInput("Informe um ano válido (de 1 até 9999) ---> ")
-  const day = 31
-  const month = 4
-  const year = 2023 
+  const day = functionDb.numericInput("Informe uma data de dia do mês válida (de 26 até 31) ---> ")
+  const month = functionDb.numericInput("Informe uma mês válido (de 1 até 12) ---> ")
+  const year = functionDb.numericInput("Informe um ano válido (de 1 até 9999) ---> ")
+  // const day = 29
+  // const month = 2
+  // const year = 2023 
 
   // Processamento
   const dateScanned = dateValidator(day, month, year)
@@ -19,19 +19,24 @@ function main() {
   // Saída
   functionDb.title("RELATÓRIO")
   functionDb.content(dateScanned)
-  functionDb.content("FIM DA EXECUÇÃO")
+  functionDb.footer("FIM DA EXECUÇÃO")
 }
 
 function dateValidator(d, m, y) {
   const theDate = `${d}/${m}/${y}`
+  
   const invalidDay = d <= 0
   const invalidDayMax = d > 31
+  
   const invalidMonth = m <= 0
   const invalidMonthMax = m > 12
+  
   const invalidYear = y <= 0
   const invalidYearMax = y > 9999 
+
   const februaryInvalidDayMin = d < 26
   const februaryInvalidDayMax = d > 29
+
   const dayIsInvalid = `A data ${theDate} é inválida por causa do dia`
   const monthIsInvalid = `A data ${theDate} é inválida por causa do mês`
   const yearIsInvalid = `A data ${theDate} é inválida por causa do ano`
@@ -39,37 +44,40 @@ function dateValidator(d, m, y) {
   
   // Verificação exclusiva p/ o mês Fevereiro
   if (m == 2) {
-    if (februaryInvalidDayMin || februaryInvalidDayMax) {
+    console.log('A')
+    if (!februaryInvalidDayMin && !februaryInvalidDayMax) {
+      if (!invalidYear && !invalidYearMax) {
+        return correctDate
+      } else {
+        return yearIsInvalid
+      }
+    } else {
       return dayIsInvalid
     }
   }
-  // Tratar dias entre 1 a 31
-  else if (invalidDay || invalidDayMax) {
-    return dayIsInvalid
-  } 
-  // Tratar meses entre 1 a 12
-  else if (invalidMonth || invalidMonthMax) {
-    return monthIsInvalid
-  } 
-  // Tratar anos entre 1 a 9999
-  else if (invalidYear || invalidYearMax) {
-    return yearIsInvalid
+  
+  if (d == 31) {
+    if (m == 1 || m == 3 || m == 5 || m == 7 || m == 8 || m == 10 || m == 12) {
+      if (!invalidYear && !invalidYearMax) {
+        return correctDate
+      } else {
+        return yearIsInvalid
+      }
+    } else {
+      return monthIsInvalid
+    }
   }
   
-  else {
-    // Se fevereiro passou acima, é validado aqui
-    if (m == 2) {
-      return correctDate
-    }
-    // Meses até dia 30
-    if (d == 31) {
-      if (m == 1 || m == 3 || m == 5 || m == 7 || m == 8 || m == 10 || m == 12) {
-        return monthIsInvalid
-      } 
-      // Meses com dia 31
-      else {
-        return correctDate
-      }
+  if (d == 30) {
+    console.log('B')
+      if (m == 4 || m == 6 || m == 9 || m == 11) {
+        if (!invalidYear && !invalidYearMax) {
+          return correctDate
+        } else {
+          yearIsInvalid
+        }
+    } else {
+      return monthIsInvalid
     }
   }
 }

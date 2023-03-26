@@ -10,8 +10,8 @@ import * as functionDb from "../../functions.js"
 
 function main() {
   // Entradas
-  // const floatNumber = functionDb.numericInput("Digite uma valor fracionado (ex: 7.2, 7.7) ---> ")
-  const floatNumber = 112.5
+  const floatNumber = functionDb.numericInput("Digite uma valor fracionado (ex: 7.2, 7.7) ---> ")
+  // const floatNumber = 112.5
 
   // Processamento
   const floatNumberRemainder = remainder(floatNumber)

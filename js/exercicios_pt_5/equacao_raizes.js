@@ -9,12 +9,12 @@ import * as functionDb from "../../functions.js"
 
 function main() {
   // Entradas
-  // const a = functionDb.numericInput("Determine um valor para A ---> ")
-  // const b = functionDb.numericInput("Determine um valor para B ---> ")
-  // const c = functionDb.numericInput("Determine um valor para C ---> ")
-  const a = 2
-  const b = 8
-  const c = -24
+  const a = functionDb.numericInput("Determine um valor para A ---> ")
+  const b = functionDb.numericInput("Determine um valor para B ---> ")
+  const c = functionDb.numericInput("Determine um valor para C ---> ")
+  // const a = 2
+  // const b = 8
+  // const c = -24
 
   // Processamento
   const coeficientsDelta = getDelta(a, b, c)

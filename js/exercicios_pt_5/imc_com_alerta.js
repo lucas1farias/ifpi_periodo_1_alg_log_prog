@@ -11,13 +11,24 @@ import * as functionDb from "../../functions.js"
 
 function main() {
   // Entradas
-  // const personHeight = functionDb.numericInput("Informe sua altura em (m) ---> ")
-  // const personWeight = functionDb.numericInput("Informe seu peso em (kg) ---> ")
-  const personHeight = 1.78
-  const personWeight = 72
+  const personHeight = functionDb.numericInput("Informe sua altura em (m) ---> ")
+  const personWeight = functionDb.numericInput("Informe seu peso em (kg) ---> ")
+  // const personHeight = 1.78
+  // const personWeight = 72
 
   // Processamento
-  const imcCalculus = imc(personWeight, personHeight)
+  let imcCalculus = 0
+  const heightCm = isInteger(personHeight)
+
+  // Altura passada em (cm) (forma inapropriada)
+  if (heightCm) {
+    imcCalculus = imc(personWeight, cmToMeters(personHeight))
+  } 
+  // Altura passada em (m) (forma apropriada)
+  else {
+    imcCalculus = imc(personWeight, personHeight)
+  }
+  
   const personWeightCategory = personShape(imcCalculus)
 
   // Saída
@@ -25,6 +36,18 @@ function main() {
   functionDb.content(`Dados da pessoa: ${personHeight}m    ${personWeight}kg`)
   functionDb.content(personWeightCategory)
   functionDb.footer("FIM DA EXECUÇÃO")
+}
+
+function isInteger(value) {
+  if (value % 1 == 0) {
+    return true
+  } else {
+    return false
+  }
+}
+
+function cmToMeters(cm) {
+  return cm / 100
 }
 
 function imc(weight, height) {

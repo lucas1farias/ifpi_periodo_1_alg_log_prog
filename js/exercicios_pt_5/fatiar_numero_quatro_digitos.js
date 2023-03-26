@@ -11,11 +11,10 @@ terceiro número é exatamente o número original de quatro dígitos. Por exempl
 import * as functionDb from "../../functions.js"
 
 function main() {
-  // const fourDigitsNumber = functionDb.numericInput("Informe um número de 4 dígitos ---> ")
-  const fourDigitsNumber = 4444
+  const fourDigitsNumber = functionDb.numericInput("Informe um número de 4 dígitos ---> ")
+  // const fourDigitsNumber = 4444
 
-  // Números nessa condição: 2025 3025 9801
-
+  // Números de 4 dígitos nessa condição: 2025 3025 9801
   // Processamento
   const thousand = getThousand(fourDigitsNumber)
   const hundred = getHundred(fourDigitsNumber)
@@ -25,6 +24,7 @@ function main() {
   const secondSum = Number(`${ten}${unit}`)
   const endNumber = (firstSum + secondSum) ** 2
   let report = ''
+  
   if (fourDigitsNumber == endNumber) {
     report = `${fourDigitsNumber} = (${firstSum} + ${secondSum}) elevado a 2? SIM -> ${endNumber}`
   } else {

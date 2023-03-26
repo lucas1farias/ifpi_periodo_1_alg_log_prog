@@ -9,15 +9,14 @@ import * as functionDb from "../../functions.js"
 
 function main() {
   // Entradas
-  // const hoursWorkedTeacher1 = functionDb.numericInput("Informe a qtd. de horas aula do professor A ---> ")
-  // const paymentPerHourTeacher1 = functionDb.numericInput("Quanto o prof. 1 recebe por hora aula ---> ")
-  // const hoursWorkedTeacher2 = functionDb.numericInput("Informe a qtd. de horas aula do professor A ---> ")
-  // const paymentPerHourTeacher2 = functionDb.numericInput("Quanto o prof. 2 recebe por hora aula ---> ")
-  
-  const hoursWorkedTeacher1 = 102
-  const paymentPerHourTeacher1 = 44
-  const hoursWorkedTeacher2 = 90
-  const paymentPerHourTeacher2 = 70
+  const hoursWorkedTeacher1 = functionDb.numericInput("Informe a qtd. de horas aula do professor A ---> ")
+  const paymentPerHourTeacher1 = functionDb.numericInput("Quanto o prof. 1 recebe por hora aula ---> ")
+  const hoursWorkedTeacher2 = functionDb.numericInput("Informe a qtd. de horas aula do professor A ---> ")
+  const paymentPerHourTeacher2 = functionDb.numericInput("Quanto o prof. 2 recebe por hora aula ---> ")  
+  // const hoursWorkedTeacher1 = 102
+  // const paymentPerHourTeacher1 = 44
+  // const hoursWorkedTeacher2 = 90
+  // const paymentPerHourTeacher2 = 70
 
   // Processamento
   const salarayTeacher1 = getSalary(hoursWorkedTeacher1, paymentPerHourTeacher1)

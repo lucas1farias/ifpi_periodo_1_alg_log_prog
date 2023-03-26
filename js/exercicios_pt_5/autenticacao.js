@@ -9,8 +9,8 @@ import * as functionDb from "../../functions.js"
 
 function main() {
   // Entradas
-  // const password = functionDb.numericInput("Informe uma senha válida ---> ")
-  const password = 1234
+  const password = functionDb.numericInput("Informe uma senha válida ---> ")
+  // const password = 1234
 
   // Processamento
   const validation = verifyPassword(password)

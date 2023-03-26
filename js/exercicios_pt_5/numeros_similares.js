@@ -5,12 +5,12 @@
 import * as functionDb from "../../functions.js"
 
 function main() {
-  // const firstNum = functionDb.numericInput('Informe um primeiro número ---> ')
-  // const secondNum = functionDb.numericInput('Informe um segundo número ---> ')
-  // const thirdNum = functionDb.numericInput('Informe um terceiro número ---> ')
-  const firstNum = 14
-  const secondNum = 14
-  const thirdNum = 14
+  const firstNum = functionDb.numericInput('Informe um primeiro número ---> ')
+  const secondNum = functionDb.numericInput('Informe um segundo número ---> ')
+  const thirdNum = functionDb.numericInput('Informe um terceiro número ---> ')
+  // const firstNum = 14
+  // const secondNum = 14
+  // const thirdNum = 14
   
   // Processamento
   const equals = numberIsEqual(firstNum, secondNum) + numberIsEqual(secondNum, thirdNum) + numberIsEqual(firstNum, thirdNum)

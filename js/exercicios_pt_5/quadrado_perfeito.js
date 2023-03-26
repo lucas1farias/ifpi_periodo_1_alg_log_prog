@@ -11,8 +11,8 @@ import * as functionDb from "../../functions.js"
 
 function main() {
   // Entradas
-  // const fourDigitsNumber = functionDb.numericInput("Informe um número de 4 dígitos ---> ")
-  const fourDigitsNumber = 4167
+  const fourDigitsNumber = functionDb.numericInput("Informe um número de 4 dígitos ---> ")
+  // const fourDigitsNumber = 4167
 
   // Processamento
   const thousand = getThousand(fourDigitsNumber)

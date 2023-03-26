@@ -9,19 +9,19 @@ import * as functionDb from "../../functions.js"
 
 function main() {
   // Entradas
-  // const firstDateDay = functionDb.numericInput("Informe o dia da primeira data ---> ")
-  // const firstDateMonth = functionDb.numericInput("Informe o mês da primeira data ---> ")
-  // const firstDateYear = functionDb.numericInput("Informe o ano da primeira data ---> ")
-  // const secondDateDay = functionDb.numericInput("Informe o dia da segunda data ---> ")
-  // const secondDateMonth = functionDb.numericInput("Informe o mês da segunda data ---> ")
-  // const secondDateYear = functionDb.numericInput("Informe o ano da segunda data ---> ")
+  const firstDateDay = functionDb.numericInput("Informe o dia da primeira data ---> ")
+  const firstDateMonth = functionDb.numericInput("Informe o mês da primeira data ---> ")
+  const firstDateYear = functionDb.numericInput("Informe o ano da primeira data ---> ")
+  const secondDateDay = functionDb.numericInput("Informe o dia da segunda data ---> ")
+  const secondDateMonth = functionDb.numericInput("Informe o mês da segunda data ---> ")
+  const secondDateYear = functionDb.numericInput("Informe o ano da segunda data ---> ")
   
-  const firstDateDay = 17
-  const firstDateMonth = 3
-  const firstDateYear = 1999
-  const secondDateDay = 16
-  const secondDateMonth = 4
-  const secondDateYear = 1998
+  // const firstDateDay = 17
+  // const firstDateMonth = 3
+  // const firstDateYear = 1999
+  // const secondDateDay = 16
+  // const secondDateMonth = 4
+  // const secondDateYear = 1998
 
   // Processamento
   const oldestYear = getOlderYear(firstDateYear, secondDateYear)

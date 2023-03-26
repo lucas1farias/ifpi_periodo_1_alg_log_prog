@@ -6,8 +6,8 @@ import * as functionDb from "../../functions.js"
 
 function main() {
   // Entradas
-  // const number = functionDb.numericInput("Informe um número qualquer acima de 0 ---> ")
-  const number = 12013
+  const number = functionDb.numericInput("Informe um número qualquer acima de 0 ---> ")
+  // const number = 12013
 
   // Processamento
   const numberOddOrEven = getNumberType(number)
@@ -16,7 +16,7 @@ function main() {
   // Saída
   functionDb.title("RELATÓRIO")
   functionDb.content(report)
-  functionDb.content("FIM DA EXECUÇÃO")
+  functionDb.footer("FIM DA EXECUÇÃO")
 }
 
 function getNumberType(n) {
