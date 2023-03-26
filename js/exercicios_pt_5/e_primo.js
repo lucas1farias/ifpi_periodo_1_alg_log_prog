@@ -7,7 +7,6 @@ import * as functionDb from "../../functions.js"
 function main() {
   // Entradas
   const twoDigitsNumber = functionDb.numericInput("Informe um número de 2 dígitos ---> ")
-  // const twoDigitsNumber = 11
 
   // Processamento
   const primeOrNot = isNumberPrime(twoDigitsNumber)
@@ -22,34 +21,48 @@ function isNumberPrime(n) {
   const yes = `${n} é primo`
   const no = `${n} não é primo`
   if (n == 1) {
-    // return 0
     return no
   }
   if (n == 2 || n == 3 || n == 5 || n == 7) {
-    // return n
     return yes
   }
   if (n % 2 != 0 && n % 3 != 0 && n % 5 != 0 && n % 7 != 0 && n % 9 != 0) {
-    // return n
     return yes
   } 
   else {
-    // return 0
     return no
   }
 }
 
 main()
 
+/*
+function isPrime(n) {
+  if (n == 1) {
+    return 0
+  }
+  if (n == 2 || n == 3 || n == 5 || n == 7) {
+    return 1
+  }
+  if (n % 2 != 0 && n % 3 != 0 && n % 5 != 0 && n % 7 != 0 && n % 9 != 0) {
+    return 1
+  } 
+  else {
+    return 0
+  }
+}
 
-// let value = 1
-// const loop = setInterval(() => {
-//   let checkage = isNumberPrime(value)
-//   if (checkage == value) {
-//     console.log(value)
-//   }  
-//   if (value == 100) {
-//     clearInterval(loop)
-//   }
-//   value++
-// })
+// Testando a função
+let value = 1
+const loop = setInterval(() => {
+  let checkage = isPrime(value)
+  if (checkage == 1) {
+    console.log(value)
+  }  
+  if (value == 100) {
+    console.log('Fim')
+    clearInterval(loop)
+  }
+  value++
+})
+*/

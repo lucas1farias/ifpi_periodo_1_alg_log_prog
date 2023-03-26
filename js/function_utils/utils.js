@@ -40,6 +40,21 @@ function isInteger(value) {
   }
 }
 
+function isNumberPrime(n) {
+  if (n == 1) {
+    return 'não'
+  }
+  if (n == 2 || n == 3 || n == 5 || n == 7) {
+    return 'sim'
+  }
+  if (n % 2 != 0 && n % 3 != 0 && n % 5 != 0 && n % 7 != 0 && n % 9 != 0) {
+    return 'sim'
+  } 
+  else {
+    return 'não'
+  }
+}
+
 function imc(weight, height) {
   const heightIsInteger = height % 1 == 0
   let heightReal = 0
@@ -56,7 +71,6 @@ print(drop)
 print(`${xerox('=', 20)} Função: isInteger ${xerox('=', 20)}`)
 print(`7 é um número inteiro? ${isInteger(7)}`)
 print(`7.2 é um número inteiro? ${isInteger(7.2)}`)
-print(xerox('=', 70))
 
 print(drop)
 print(`${xerox('=', 20)} Função: imc ${xerox('=', 20)}`)
@@ -81,3 +95,8 @@ print(drop)
 // Ex: se o alvo fosse, por exemplo, UNIDADE 7, bastava + 1000 e passá-lo como parâmetro
 print(`${xerox('=', 20)} Função: getUnit ${xerox('=', 20)}`)
 print(`Quem é a unidade de 7285? ${getUnit(7285)}`)
+
+print(drop)
+print(`${xerox('=', 20)} Função: isNumberPrime ${xerox('=', 20)}`)
+print(`131 é um número primo? ${isNumberPrime(131)}`)
+print(`62 é um número primo? ${isNumberPrime(62)}`)
