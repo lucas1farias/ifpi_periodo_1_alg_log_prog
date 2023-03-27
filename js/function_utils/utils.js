@@ -14,6 +14,62 @@ function xerox(char, amount) {
   return char
 }
 
+// CALCULAR
+function getPercentage(value, percentage, roundIt) {
+  const fractionOfPercentage = value * (percentage / 100)
+  
+  if (roundIt) {
+    return Math.round(fractionOfPercentage)
+  } else {
+    return fractionOfPercentage.toFixed(1)
+  }
+}
+
+function getRemainderFloat(number) {
+  return (number % 1).toFixed(2)
+}
+
+function imc(weight, height) {
+  const heightIsInteger = height % 1 == 0
+  let heightReal = 0
+  
+  if (heightIsInteger) {
+    heightReal = height / 100
+    return (weight / heightReal ** 2).toFixed(1)
+  } else {
+    return (weight / height ** 2).toFixed(1)
+  }
+}
+
+function moneySplit(money) {
+  const fifty = Math.floor(money / 50)
+  const fiftyRemainder = money % 50
+
+  const twenty = Math.floor(fiftyRemainder / 20)
+  const twentyRemainder = fiftyRemainder % 20
+  
+  const ten = Math.floor(twentyRemainder / 10)
+  const tenRemainder = twentyRemainder % 10
+  
+  const five = Math.floor(tenRemainder / 5)
+  const fiveRemainder = tenRemainder % 5
+  
+  const two = Math.floor(fiveRemainder / 2)
+  const twoRemainder = fiveRemainder % 2
+  
+  const one = Math.floor(twoRemainder / 1)
+  
+  return `
+    Notas de 50: ${fifty}
+    Notas de 20: ${twenty}
+    Notas de 10: ${ten}
+    Notas de 5: ${five}
+    Notas de 2: ${two}
+    Notas de 1: ${one}
+  `
+}
+
+// IDENTIFICAR
 function getThousand(numberFourDigits) {
   return Math.floor(numberFourDigits / 1000)
 }
@@ -32,6 +88,7 @@ function getUnit(numberFourDigits) {
   return numberFourDigits % 10
 }
 
+// IDENTIFICAR TIPO 2
 function isInteger(value) {
   if (value % 1 == 0) {
     return true
@@ -55,17 +112,49 @@ function isNumberPrime(n) {
   }
 }
 
-function imc(weight, height) {
-  const heightIsInteger = height % 1 == 0
-  let heightReal = 0
+// TEMPO
+function hourToMinutes(hour, minute) {
+  return (hour * 60) + minute
+}
+
+function minutesToHour(minute) {
+  const secsInMin = 60
+  const getHour = Math.floor(minute / secsInMin)
+  const getMin = minute % secsInMin
+  return `${getHour}h:${getMin}min` 
+}
+
+function secondsToTime(secondAmount) {
+  const hour = Math.floor(secondAmount / 3600)
+  const hourRemainder = (secondAmount / 3600) % 1
   
-  if (heightIsInteger) {
-    heightReal = height / 100
-    return (weight / heightReal ** 2).toFixed(1)
-  } else {
-    return (weight / height ** 2).toFixed(1)
+  const minutes = Math.floor(hourRemainder * 60)
+  const minuteLeftover = ((hourRemainder * 60) % 1).toFixed(2)
+  
+  const seconds = Math.floor(minuteLeftover * 60)
+  
+  return `${hour}h:${minutes}min:${seconds}seg`
+}
+
+// TEMPO TIPO 2
+function daysConverter(numberOfDays, option) {
+  if (option == 'meses') {
+    return Math.floor(numberOfDays * 0.032855)
+  } else if (option == 'anos') {
+    return Math.floor(numberOfDays * 0.002738)
   }
 }
+
+function monthToYear(month) {
+  const monthQuotient = Math.floor(month / 12)
+  const monthRemainder = Math.floor(month % 12)
+  return `${monthQuotient} ano(s) e ${monthRemainder} mês(es)`
+}
+
+print(drop)
+print(`${xerox('=', 20)} Função: daysToYears ${xerox('=', 20)}`)
+print(`Uma pessoa que viveu por 9277 dias, têm quantos meses? ${daysConverter(9277, 'meses')}`)
+print(`Uma pessoa que viveu por 9277 dias, têm quantos anos? ${daysConverter(9277, 'anos')}`)
 
 print(drop)
 print(`${xerox('=', 20)} Função: isInteger ${xerox('=', 20)}`)
@@ -97,6 +186,36 @@ print(`${xerox('=', 20)} Função: getUnit ${xerox('=', 20)}`)
 print(`Quem é a unidade de 7285? ${getUnit(7285)}`)
 
 print(drop)
+print(`${xerox('=', 20)} Função: getPercentage ${xerox('=', 20)}`)
+print(`Quanto é 90% do valor 72? ${getPercentage(72, 90, false)}`)
+print(`Quanto é 90% do valor 72? ${getPercentage(72, 90, true)}`)
+
+print(drop)
+print(`${xerox('=', 20)} Função: getRemainderFloat ${xerox('=', 20)}`)
+print(`Quanto é o resto de 7.72? ${getRemainderFloat(7.72)}`)
+
+print(drop)
+print(`${xerox('=', 20)} Função: hourToMinutes ${xerox('=', 20)}`)
+print(`3 horas e 14 minutos equivale a?: ${hourToMinutes(3, 14)} minutos`)
+
+print(drop)
 print(`${xerox('=', 20)} Função: isNumberPrime ${xerox('=', 20)}`)
 print(`131 é um número primo? ${isNumberPrime(131)}`)
 print(`62 é um número primo? ${isNumberPrime(62)}`)
+
+print(drop)
+print(`${xerox('=', 20)} Função: minutesToHour ${xerox('=', 20)}`)
+print(`131 minutos equivale a? ${minutesToHour(131)}`)
+
+print(drop)
+print(`${xerox('=', 20)} Função: moneySplit ${xerox('=', 20)}`)
+print(`Como fica a divisão de uma cédula de R$ 62,00? ${moneySplit(62)}`)
+
+print(drop)
+print(`${xerox('=', 20)} Função: monthToYear ${xerox('=', 20)}`)
+print(`Quanto 22 meses value em anos e meses? ${monthToYear(22)}`)
+
+print(drop)
+print(`${xerox('=', 20)} Função: secondsToTime ${xerox('=', 20)}`)
+print(`Quantos é 307 segundos convertido em tempo completo? ${secondsToTime(307)}`)
+print(`Quantos é 20666 segundos convertido em tempo completo? ${secondsToTime(20666)}`)
